@@ -326,6 +326,47 @@
       margin-bottom: 22px;
     }
 
+    /* Lock the Paid Social and SEO cards to matching content rows */
+    .case-card:nth-child(3),
+    .case-card:nth-child(4) {
+      display: grid;
+      grid-template-rows: 22px 72px 88px 260px 112px auto;
+      align-content: start;
+    }
+
+    .case-card:nth-child(3) .case-kicker,
+    .case-card:nth-child(4) .case-kicker,
+    .case-card:nth-child(3) h3,
+    .case-card:nth-child(4) h3,
+    .case-card:nth-child(3) > p:not(.case-kicker),
+    .case-card:nth-child(4) > p:not(.case-kicker),
+    .case-card:nth-child(3) .case-image,
+    .case-card:nth-child(4) .case-image,
+    .case-card:nth-child(3) .case-metrics,
+    .case-card:nth-child(4) .case-metrics {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .case-card:nth-child(3) .case-image,
+    .case-card:nth-child(4) .case-image {
+      height: 260px;
+      align-self: start;
+    }
+
+    .case-card:nth-child(3) .case-metrics,
+    .case-card:nth-child(4) .case-metrics {
+      align-self: start;
+      padding-top: 22px;
+    }
+
+    .case-card:nth-child(3) .case-link,
+    .case-card:nth-child(4) .case-link {
+      align-self: start;
+      justify-self: start;
+      margin-top: 18px;
+    }
+
     .case-metrics {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -590,6 +631,32 @@
 
     @media (max-width: 800px) {
 
+      .case-card:nth-child(3),
+      .case-card:nth-child(4) {
+        display: block;
+      }
+
+      .case-card:nth-child(3) h3,
+      .case-card:nth-child(4) h3 {
+        margin-bottom: 12px;
+      }
+
+      .case-card:nth-child(3) > p:not(.case-kicker),
+      .case-card:nth-child(4) > p:not(.case-kicker) {
+        margin-bottom: 22px;
+      }
+
+      .case-card:nth-child(3) .case-image,
+      .case-card:nth-child(4) .case-image {
+        margin-top: 8px;
+      }
+
+      .case-card:nth-child(3) .case-metrics,
+      .case-card:nth-child(4) .case-metrics {
+        margin: 22px 0;
+        padding-top: 0;
+      }
+
       .nav-links a:not(.nav-button) {
         display: none;
       }
@@ -849,126 +916,12 @@
     </section>
 
 
-    <!-- SELECTED WORK -->
-
-    <section class="work" id="work">
-      <div class="container">
-
-        <div class="section-heading">
-          <span class="section-number">02 / SELECTED WORK</span>
-
-          <h2>
-            Marketing built around business outcomes.
-          </h2>
-        </div>
-
-
-        <article class="project">
-
-          <div class="project-number">01</div>
-
-          <div>
-            <h3>BIBA Exhibition Campaign</h3>
-
-            <p>
-              End-to-end planning and delivery of Acasta Europe's presence at
-              one of the UK's major insurance events, bringing together brand,
-              event strategy, stakeholder management and lead generation.
-            </p>
-
-          </div>
-
-          <div class="project-tags">
-            EVENT STRATEGY<br>
-            LEAD GENERATION<br>
-            PROJECT MANAGEMENT<br>
-            BRAND EXPERIENCE
-          </div>
-
-        </article>
-
-
-        <article class="project">
-
-          <div class="project-number">02</div>
-
-          <div>
-            <h3>Digital & E-commerce Marketing</h3>
-
-            <p>
-              Supporting Searchlight Electric's digital presence through SEO,
-              optimised website content, social media, email marketing,
-              e-commerce and integrated campaign activity.
-            </p>
-          </div>
-
-          <div class="project-tags">
-            SEO<br>
-            E-COMMERCE<br>
-            CONTENT<br>
-            EMAIL MARKETING
-          </div>
-
-        </article>
-
-
-        <article class="project">
-
-          <div class="project-number">03</div>
-
-          <div>
-            <h3>Medicus Pharmacy Digital Growth</h3>
-
-            <p>
-              Developing the brand's digital presence through website creation,
-              content, lead generation, social media and paid activity designed
-              to support customer acquisition and growth.
-            </p>
-          </div>
-
-          <div class="project-tags">
-            WEBSITE<br>
-            PAID SOCIAL<br>
-            LEAD GENERATION<br>
-            CONTENT STRATEGY
-          </div>
-
-        </article>
-
-
-        <article class="project">
-
-          <div class="project-number">04</div>
-
-          <div>
-            <h3>Brand & Digital Campaigns</h3>
-
-            <p>
-              A selection of earlier digital marketing work spanning legal,
-              agency and professional-services environments, including SEO,
-              websites, social media, email, analytics and creative campaigns.
-            </p>
-          </div>
-
-          <div class="project-tags">
-            DIGITAL MARKETING<br>
-            SOCIAL MEDIA<br>
-            ANALYTICS<br>
-            CAMPAIGNS
-          </div>
-
-        </article>
-
-      </div>
-    </section>
-
-
     <!-- GRAPHICS & CREATIVE -->
 
     <section class="graphics" id="graphics">
       <div class="container">
         <div class="section-heading">
-          <span class="section-number">03 / GRAPHICS &amp; CREATIVE</span>
+          <span class="section-number">02 / GRAPHICS &amp; CREATIVE</span>
           <h2>Creative assets designed for digital campaigns and trade partners.</h2>
         </div>
 
@@ -985,15 +938,7 @@
         <div class="graphics-grid">
           <figure class="graphic-card">
             <img src="images/G&R Spring Banner.jpg" alt="Searchlight outdoor lighting website banner">
-            <figcaption><strong>Client Website Banner</strong><span>Trade-facing digital banner creative for a client's website.</span></figcaption>
-          </figure>
-          <figure class="graphic-card">
-            <img src="images/St. Patrick's Day(1).jpg" alt="Searchlight St Patrick's Day campaign graphic">
-            <figcaption><strong>Seasonal Campaign Creative</strong><span>St Patrick's Day social and digital campaign artwork.</span></figcaption>
-          </figure>
-          <figure class="graphic-card">
-            <img src="images/Outdoor.jpg" alt="Outdoor lighting visual in a landscaped garden">
-            <figcaption><strong>Outdoor Lighting Creative</strong><span>Product-focused visual for Searchlight's outdoor lighting range.</span></figcaption>
+            <figcaption><strong>Client Website Banner 01</strong><span>One of two banner variations created for the same client's website.</span></figcaption>
           </figure>
           <figure class="graphic-card">
             <img src="images/searchlight-web-banner.PNG" alt="Searchlight Electric website banner design">
@@ -1001,7 +946,7 @@
           </figure>
           <figure class="graphic-card">
             <img src="images/sel-banner client.PNG" alt="Searchlight Electric banner artwork displayed on a client website">
-            <figcaption><strong>Client Website Banner</strong><span>Trade marketing artwork supplied for use across a client's website.</span></figcaption>
+            <figcaption><strong>Client Website Banner 02</strong><span>Second banner variation created for the same client's website.</span></figcaption>
           </figure>
         </div>
       </div>
@@ -1014,7 +959,7 @@
       <div class="container">
 
         <div class="section-heading">
-          <span class="section-number">04 / ABOUT</span>
+          <span class="section-number">03 / ABOUT</span>
           <h2>Creative thinking with commercial purpose.</h2>
         </div>
 
@@ -1074,7 +1019,7 @@
       <div class="container">
 
         <div class="section-heading">
-          <span class="section-number">05 / EXPERIENCE</span>
+          <span class="section-number">04 / EXPERIENCE</span>
           <h2>Career progression.</h2>
         </div>
 
@@ -1135,7 +1080,7 @@
       <div class="container">
 
         <div class="section-heading">
-          <span class="section-number">06 / EDUCATION</span>
+          <span class="section-number">05 / EDUCATION</span>
           <h2>Knowledge backed by experience.</h2>
         </div>
 
@@ -1238,7 +1183,7 @@
         roomsetSlides[roomsetIndex].classList.remove('is-active');
         roomsetIndex = (roomsetIndex + 1) % roomsetSlides.length;
         roomsetSlides[roomsetIndex].classList.add('is-active');
-      }, 6000);
+      }, 4000);
     }
   </script>
 
