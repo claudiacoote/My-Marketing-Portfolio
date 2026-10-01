@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Claudia Coote | Marketing Manager</title>
+
+  <meta
+    name="description"
+    content="Portfolio of Claudia Coote, a Marketing Manager specialising in integrated campaigns, digital marketing, content, events and brand strategy."
+  >
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap');
+    :root {
+      --navy: #12263A;
+      --navy-light: #36566F;
+      --cream: #F8F7F4;
+      --white: #FFFFFF;
+      --text: #171717;
+      --muted: #667085;
+      --border: #E4E4E0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: 0 auto;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 247, 244, 0.95);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--navy);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      font-size: 0.92rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--navy-light);
+    }
+
+    .nav-button {
+      padding: 10px 18px;
+      background: var(--navy);
+      color: white !important;
+      border-radius: 9px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--navy-light);
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-family: 'Manrope', 'Inter', Arial, sans-serif;
+      color: var(--navy);
+      font-size: clamp(3.6rem, 9vw, 8rem);
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+      max-width: 900px;
+    }
+
+    .hero-title {
+      margin-top: 28px;
+      font-size: clamp(1.35rem, 2.5vw, 2rem);
+      font-weight: 500;
+    }
+
+    .hero-description {
+      margin-top: 20px;
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 15px;
+      margin-top: 38px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 23px;
+      border: 1px solid var(--navy);
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--navy);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: var(--navy-light);
+    }
+
+    .button-secondary {
+      color: var(--navy);
+    }
+
+    .button-secondary:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    /* STATS */
+
+    .stats {
+      background: var(--navy);
+      color: white;
+      padding: 50px 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stat {
+      padding: 15px 30px;
+      border-right: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .stat:first-child {
+      padding-left: 0;
+    }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .stat-label {
+      color: rgba(255,255,255,0.72);
+      font-size: 0.9rem;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 50px;
+      margin-bottom: 60px;
+    }
+
+    .section-number {
+      color: var(--navy-light);
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-family: 'Manrope', 'Inter', Arial, sans-serif;
+      color: var(--navy);
+      font-size: clamp(2.2rem, 5vw, 4.3rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    /* WORK */
+
+    .work {
+      background: white;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 0.8fr 2fr 1fr;
+      gap: 40px;
+      padding: 45px 0;
+      border-top: 1px solid var(--border);
+      transition: 0.2s ease;
+    }
+
+    .project:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project:hover {
+      padding-left: 12px;
+    }
+
+    .project-number {
+      color: var(--navy-light);
+      font-weight: 700;
+    }
+
+    .project h3 {
+      font-family: 'Manrope', 'Inter', Arial, sans-serif;
+      color: var(--navy);
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: var(--muted);
+      max-width: 600px;
+    }
+
+    .project-tags {
+      font-size: 0.85rem;
+      color: var(--navy-light);
+      line-height: 1.8;
+    }
+
+    .result {
+      display: inline-block;
+      margin-top: 16px;
+      font-weight: 700;
+      color: var(--navy) !important;
+    }
+
+    /* CASE STUDIES */
+
+    .case-studies {
+      background: var(--cream);
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .case-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 34px;
+      overflow: hidden;
+    }
+
+    .case-kicker {
+      color: var(--navy-light);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .case-card h3 {
+      color: var(--navy);
+      font-size: 1.65rem;
+      margin-bottom: 12px;
+    }
+
+    .case-card > p {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .case-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 22px 0;
+    }
+
+    .case-metric {
+      border-top: 2px solid var(--navy);
+      padding-top: 12px;
+    }
+
+    .case-metric strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+
+    .case-metric span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .case-image {
+      width: 100%;
+      border-radius: 11px;
+      height: 260px;
+      object-fit: cover;
+      object-position: top;
+      border: 1px solid var(--border);
+      margin-top: 8px;
+    }
+
+    .creative-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .creative-grid img {
+      width: 100%;
+      border-radius: 11px;
+      height: 220px;
+      object-fit: cover;
+      object-position: top;
+      border: 1px solid var(--border);
+    }
+
+    .case-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .case-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--navy);
+      font-weight: 700;
+      border-bottom: 1px solid var(--navy);
+      padding-bottom: 2px;
+    }
+
+    .case-link:hover {
+      color: var(--navy-light);
+      border-color: var(--navy-light);
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin-bottom: 20px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .skill {
+      border-bottom: 1px solid var(--border);
+      padding: 13px 0;
+      font-weight: 600;
+    }
+
+    /* EXPERIENCE */
+
+    .experience {
+      background: var(--navy);
+      color: white;
+    }
+
+    .experience h2 {
+      font-family: 'Manrope', 'Inter', Arial, sans-serif;
+      color: white;
+    }
+
+    .experience .section-number {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .role {
+      display: grid;
+      grid-template-columns: 0.7fr 1fr 1.5fr;
+      gap: 30px;
+      padding: 28px 0;
+      border-top: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .role-date {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .role-title {
+      font-weight: 700;
+    }
+
+    .role-company {
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* EDUCATION */
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 80px;
+    }
+
+    .education-card {
+      padding: 35px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .education-card h3 {
+      color: var(--navy);
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .education-card p {
+      color: var(--muted);
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-family: 'Manrope', 'Inter', Arial, sans-serif;
+      max-width: 850px;
+      margin: 0 auto 25px;
+    }
+
+    .contact p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto 35px;
+    }
+
+    footer {
+      background: white;
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .nav-links a:not(.nav-button) {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 100px 0;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat {
+        border-right: none;
+        padding: 20px 0;
+      }
+
+      .section-heading,
+      .about-grid,
+      .education-grid,
+      .case-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .project {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .role {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .skills,
+      .case-metrics,
+      .creative-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .creative-grid img {
+        height: auto;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="logo">CC.</a>
+
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact" class="nav-button">Get in touch</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="container">
+
+        <p class="eyebrow">Marketing Manager · Digital Strategist</p>
+
+        <h1>Claudia Coote</h1>
+
+        <p class="hero-title">
+          Strategy. Creativity. Measurable growth.
+        </p>
+
+        <p class="hero-description">
+          Marketing Manager with experience delivering integrated campaigns,
+          building brands and creating digital experiences across B2B and B2C
+          environments. I combine creative thinking with commercial strategy
+          to turn marketing activity into meaningful business outcomes.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#work" class="button button-primary">
+            View my work
+          </a>
+
+          <a href="#about" class="button button-secondary">
+            About me
+          </a>
+
+          <a href="Reference- Claudia Coote, Marketing Manager, Acasta Europe.pdf" class="button button-secondary" target="_blank" rel="noopener">
+            View reference
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CREDIBILITY -->
+
+    <div class="stats">
+      <div class="container stats-grid">
+
+        <div class="stat">
+          <span class="stat-number">8+ years</span>
+          <span class="stat-label">Marketing experience</span>
+        </div>
+
+        <div class="stat">
+          <span class="stat-number">£20K</span>
+          <span class="stat-label">BIBA event budget managed</span>
+        </div>
+
+        <div class="stat">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">BIBA leads generated</span>
+        </div>
+
+        <div class="stat">
+          <span class="stat-number">141</span>
+          <span class="stat-label">Leads from a 4-day Meta campaign</span>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- SELECTED WORK -->
+
+    <section class="work" id="work">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-number">01 / SELECTED WORK</span>
+
+          <h2>
+            Marketing built around business outcomes.
+          </h2>
+        </div>
+
+
+        <article class="project">
+
+          <div class="project-number">01</div>
+
+          <div>
+            <h3>BIBA Exhibition Campaign</h3>
+
+            <p>
+              End-to-end planning and delivery of Acasta Europe's presence at
+              one of the UK's major insurance events, bringing together brand,
+              event strategy, stakeholder management and lead generation.
+            </p>
+
+            <p class="result">
+              £20,000 budget · 500+ leads generated
+            </p>
+          </div>
+
+          <div class="project-tags">
+            EVENT STRATEGY<br>
+            LEAD GENERATION<br>
+            PROJECT MANAGEMENT<br>
+            BRAND EXPERIENCE
+          </div>
+
+        </article>
+
+
+        <article class="project">
+
+          <div class="project-number">02</div>
+
+          <div>
+            <h3>Digital & E-commerce Marketing</h3>
+
+            <p>
+              Supporting Searchlight Electric's digital presence through SEO,
+              optimised website content, social media, email marketing,
+              e-commerce and integrated campaign activity.
+            </p>
+          </div>
+
+          <div class="project-tags">
+            SEO<br>
+            E-COMMERCE<br>
+            CONTENT<br>
+            EMAIL MARKETING
+          </div>
+
+        </article>
+
+
+        <article class="project">
+
+          <div class="project-number">03</div>
+
+          <div>
+            <h3>Medicus Pharmacy Digital Growth</h3>
+
+            <p>
+              Developing the brand's digital presence through website creation,
+              content, lead generation, social media and paid activity designed
+              to support customer acquisition and growth.
+            </p>
+          </div>
+
+          <div class="project-tags">
+            WEBSITE<br>
+            PAID SOCIAL<br>
+            LEAD GENERATION<br>
+            CONTENT STRATEGY
+          </div>
+
+        </article>
+
+
+        <article class="project">
+
+          <div class="project-number">04</div>
+
+          <div>
+            <h3>Brand & Digital Campaigns</h3>
+
+            <p>
+              A selection of earlier digital marketing work spanning legal,
+              agency and professional-services environments, including SEO,
+              websites, social media, email, analytics and creative campaigns.
+            </p>
+          </div>
+
+          <div class="project-tags">
+            DIGITAL MARKETING<br>
+            SOCIAL MEDIA<br>
+            ANALYTICS<br>
+            CAMPAIGNS
+          </div>
+
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- CASE STUDIES -->
+
+    <section class="case-studies" id="case-studies">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-number">02 / CASE STUDIES</span>
+          <h2>Creative work backed by measurable results.</h2>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-card">
+            <p class="case-kicker">Acasta Europe · Integrated Event Marketing</p>
+            <h3>BIBA exhibition campaign</h3>
+            <p>End-to-end planning and delivery of Acasta Europe's BIBA presence, combining event strategy, brand execution and lead generation.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><strong>£20K</strong><span>budget managed</span></div>
+              <div class="case-metric"><strong>500+</strong><span>leads generated</span></div>
+              <div class="case-metric"><strong>9,000+</strong><span>event delegates</span></div>
+            </div>
+            <a class="case-link" href="biba-case-study.html">View case study →</a>
+          </article>
+
+          <article class="case-card">
+            <p class="case-kicker">Searchlight Electric · Email & CRM</p>
+            <h3>Email campaigns & audience engagement</h3>
+            <p>Branded product-launch and customer re-engagement email activity, combining creative execution with campaign performance analysis.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><strong>9,471</strong><span>unique clickers</span></div>
+              <div class="case-metric"><strong>15,514</strong><span>total clicks</span></div>
+              <div class="case-metric"><strong>15.9%</strong><span>campaign click rate</span></div>
+            </div>
+            <a class="case-link" href="searchlight-email.html">View case study →</a>
+          </article>
+
+          <article class="case-card">
+            <p class="case-kicker">Medicus Pharmacy · Paid Social</p>
+            <h3>Paid social & lead generation</h3>
+            <p>A four-day Meta lead-generation campaign promoting the NHS repeat prescription service, focused on efficient customer acquisition.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><strong>141</strong><span>leads generated</span></div>
+              <div class="case-metric"><strong>£2.41</strong><span>cost per lead</span></div>
+              <div class="case-metric"><strong>20,432</strong><span>people reached</span></div>
+            </div>
+            <a class="case-link" href="medicus-paid-social.html">View case study →</a>
+          </article>
+
+          <article class="case-card">
+            <p class="case-kicker">Searchlight Electric · SEO</p>
+            <h3>SEO & organic search visibility</h3>
+            <p>Keyword-led website and content optimisation that improved rankings across commercially relevant Google UK search terms.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><strong>48 → 13</strong><span>Wholesale Lighting</span></div>
+              <div class="case-metric"><strong>39 → 13</strong><span>Decorative Lighting</span></div>
+              <div class="case-metric"><strong>41 → 31</strong><span>Ceiling Lights</span></div>
+            </div>
+            <a class="case-link" href="searchlight-seo.html">View case study →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-number">03 / ABOUT</span>
+          <h2>Creative thinking with commercial purpose.</h2>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-copy">
+            <p>
+              I'm a marketing professional with experience progressing from
+              hands-on digital marketing roles to leading marketing activity
+              as a Marketing Manager.
+            </p>
+
+            <p>
+              My background spans integrated campaigns, digital strategy,
+              events, SEO, content, social media, email marketing, websites,
+              partnerships and brand development.
+            </p>
+
+            <p>
+              I enjoy bringing together creative ideas, audience insight and
+              commercial objectives to create marketing that is both engaging
+              and purposeful.
+            </p>
+          </div>
+
+          <div class="skills">
+            <div class="skill">Marketing Strategy</div>
+            <div class="skill">Campaign Management</div>
+            <div class="skill">Brand Development</div>
+            <div class="skill">Content Strategy</div>
+            <div class="skill">SEO / SEM</div>
+            <div class="skill">Social Media</div>
+            <div class="skill">Email Marketing</div>
+            <div class="skill">Event Marketing</div>
+            <div class="skill">Lead Generation</div>
+            <div class="skill">Website Management</div>
+            <div class="skill">Marketing Analytics</div>
+            <div class="skill">Team Leadership</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- EXPERIENCE -->
+
+    <section class="experience" id="experience">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-number">04 / EXPERIENCE</span>
+          <h2>Career progression.</h2>
+        </div>
+
+
+        <div class="role">
+          <div class="role-date">2024 — 2026</div>
+          <div class="role-title">Marketing Manager</div>
+          <div class="role-company">Acasta Europe</div>
+        </div>
+
+        <div class="role">
+          <div class="role-date">2024 — 2026</div>
+          <div class="role-title">Senior Marketing Executive</div>
+          <div class="role-company">Acasta Europe</div>
+        </div>
+
+        <div class="role">
+          <div class="role-date">2022 — 2024</div>
+          <div class="role-title">Marketing Executive</div>
+          <div class="role-company">Searchlight Electric</div>
+        </div>
+
+        <div class="role">
+          <div class="role-date">2021 — 2022</div>
+          <div class="role-title">Marketing Assistant</div>
+          <div class="role-company">Medicus Pharmacy</div>
+        </div>
+
+        <div class="role">
+          <div class="role-date">2020 — 2021</div>
+          <div class="role-title">Digital Marketing Assistant</div>
+          <div class="role-company">QC Legal</div>
+        </div>
+
+        <div class="role">
+          <div class="role-date">2017 — 2018</div>
+          <div class="role-title">
+            Digital Marketing & Web Development Coordinator
+          </div>
+          <div class="role-company">Gowing Law Solicitors</div>
+        </div>
+
+        <div class="role">
+          <div class="role-date">2016 — 2017</div>
+          <div class="role-title">
+            Social Media & Digital Marketing Apprentice
+          </div>
+          <div class="role-company">MSM Digital Group</div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section>
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-number">05 / EDUCATION</span>
+          <h2>Knowledge backed by experience.</h2>
+        </div>
+
+        <div class="education-grid">
+
+          <div>
+
+            <div class="education-card">
+              <h3>Business & Marketing Degree</h3>
+              <p>
+                Manchester Metropolitan University · 2:1
+              </p>
+            </div>
+
+            <div class="education-card">
+              <h3>Social Media & Digital Marketing Level 3</h3>
+              <p>Baltic Training Services</p>
+            </div>
+
+          </div>
+
+          <div>
+
+            <div class="education-card">
+              <h3>Management and Leadership Course Completion</h3>
+              <p>Asset Training</p>
+            </div>
+
+            <div class="education-card">
+              <h3>Marketing Executive Training</h3>
+              <p>One Education · CPD Accredited · Distinction</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+      <div class="container">
+
+        <p class="eyebrow">LET'S CONNECT</p>
+
+        <h2>
+          Looking for a Marketing Manager who can turn strategy into action?
+        </h2>
+
+        <p>
+          I'm open to Marketing Manager opportunities where I can combine
+          strategy, creativity and commercial thinking to help ambitious
+          organisations grow.
+        </p>
+
+        <!-- We will add Claudia's real email and LinkedIn here later -->
+
+        <a href="mailto:cooteclaudia@gmail.com" class="button button-primary">
+          Contact Claudia
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Claudia Coote</span>
+      <span>Marketing Manager · Portfolio</span>
+    </div>
+  </footer>
+
+</body>
+</html>
