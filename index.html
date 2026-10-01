@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Rose Rose | Marketing Manager</title>
+  <title>Claudia Coote | Marketing Manager</title>
 
   <meta
     name="description"
-    content="Portfolio of Rose Rose, a Marketing Manager specialising in integrated campaigns, digital marketing, content, events and brand strategy."
+    content="Portfolio of Claudia Coote, a Marketing Manager specialising in integrated campaigns, digital marketing, content, events and brand strategy."
   >
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap');
     :root {
       --navy: #12263A;
       --navy-light: #36566F;
@@ -33,7 +34,7 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Inter', Arial, Helvetica, sans-serif;
       background: var(--cream);
       color: var(--text);
       line-height: 1.6;
@@ -88,7 +89,7 @@
       padding: 10px 18px;
       background: var(--navy);
       color: white !important;
-      border-radius: 3px;
+      border-radius: 9px;
     }
 
     /* HERO */
@@ -110,6 +111,7 @@
     }
 
     h1 {
+      font-family: 'Manrope', 'Inter', Arial, sans-serif;
       color: var(--navy);
       font-size: clamp(3.6rem, 9vw, 8rem);
       line-height: 0.9;
@@ -141,6 +143,7 @@
       display: inline-block;
       padding: 14px 23px;
       border: 1px solid var(--navy);
+      border-radius: 9px;
       font-weight: 700;
       font-size: 0.9rem;
       transition: 0.2s ease;
@@ -223,6 +226,7 @@
     }
 
     h2 {
+      font-family: 'Manrope', 'Inter', Arial, sans-serif;
       color: var(--navy);
       font-size: clamp(2.2rem, 5vw, 4.3rem);
       line-height: 1;
@@ -258,6 +262,7 @@
     }
 
     .project h3 {
+      font-family: 'Manrope', 'Inter', Arial, sans-serif;
       color: var(--navy);
       font-size: 1.8rem;
       margin-bottom: 10px;
@@ -279,6 +284,118 @@
       margin-top: 16px;
       font-weight: 700;
       color: var(--navy) !important;
+    }
+
+    /* CASE STUDIES */
+
+    .case-studies {
+      background: var(--cream);
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .case-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 34px;
+      overflow: hidden;
+    }
+
+    .case-kicker {
+      color: var(--navy-light);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .case-card h3 {
+      color: var(--navy);
+      font-size: 1.65rem;
+      margin-bottom: 12px;
+    }
+
+    .case-card > p {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .case-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 22px 0;
+    }
+
+    .case-metric {
+      border-top: 2px solid var(--navy);
+      padding-top: 12px;
+    }
+
+    .case-metric strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+
+    .case-metric span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .case-image {
+      width: 100%;
+      border-radius: 11px;
+      height: 260px;
+      object-fit: cover;
+      object-position: top;
+      border: 1px solid var(--border);
+      margin-top: 8px;
+    }
+
+    .creative-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .creative-grid img {
+      width: 100%;
+      border-radius: 11px;
+      height: 220px;
+      object-fit: cover;
+      object-position: top;
+      border: 1px solid var(--border);
+    }
+
+    .case-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .case-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--navy);
+      font-weight: 700;
+      border-bottom: 1px solid var(--navy);
+      padding-bottom: 2px;
+    }
+
+    .case-link:hover {
+      color: var(--navy-light);
+      border-color: var(--navy-light);
     }
 
     /* ABOUT */
@@ -315,6 +432,7 @@
     }
 
     .experience h2 {
+      font-family: 'Manrope', 'Inter', Arial, sans-serif;
       color: white;
     }
 
@@ -373,6 +491,7 @@
     }
 
     .contact h2 {
+      font-family: 'Manrope', 'Inter', Arial, sans-serif;
       max-width: 850px;
       margin: 0 auto 25px;
     }
@@ -420,7 +539,8 @@
 
       .section-heading,
       .about-grid,
-      .education-grid {
+      .education-grid,
+      .case-grid {
         grid-template-columns: 1fr;
         gap: 25px;
       }
@@ -435,8 +555,14 @@
         gap: 5px;
       }
 
-      .skills {
+      .skills,
+      .case-metrics,
+      .creative-grid {
         grid-template-columns: 1fr;
+      }
+
+      .creative-grid img {
+        height: auto;
       }
 
       .footer-inner {
@@ -455,10 +581,11 @@
 
   <nav>
     <div class="container nav-inner">
-      <a href="#" class="logo">RR.</a>
+      <a href="#" class="logo">CC.</a>
 
       <div class="nav-links">
         <a href="#work">Work</a>
+        <a href="#case-studies">Case Studies</a>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#contact" class="nav-button">Get in touch</a>
@@ -476,7 +603,7 @@
 
         <p class="eyebrow">Marketing Manager · Digital Strategist</p>
 
-        <h1>Rose Rose</h1>
+        <h1>Claudia Coote</h1>
 
         <p class="hero-title">
           Strategy. Creativity. Measurable growth.
@@ -491,11 +618,15 @@
 
         <div class="hero-actions">
           <a href="#work" class="button button-primary">
-            View selected work
+            View my work
           </a>
 
           <a href="#about" class="button button-secondary">
             About me
+          </a>
+
+          <a href="Reference- Claudia Coote, Marketing Manager, Acasta Europe.pdf" class="button button-secondary" target="_blank" rel="noopener">
+            View reference
           </a>
         </div>
 
@@ -524,8 +655,8 @@
         </div>
 
         <div class="stat">
-          <span class="stat-number">360°</span>
-          <span class="stat-label">Integrated marketing experience</span>
+          <span class="stat-number">141</span>
+          <span class="stat-label">Leads from a 4-day Meta campaign</span>
         </div>
 
       </div>
@@ -603,7 +734,7 @@
           <div class="project-number">03</div>
 
           <div>
-            <h3>Medicus Wellness Digital Growth</h3>
+            <h3>Medicus Pharmacy Digital Growth</h3>
 
             <p>
               Developing the brand's digital presence through website creation,
@@ -649,13 +780,75 @@
     </section>
 
 
+    <!-- CASE STUDIES -->
+
+    <section class="case-studies" id="case-studies">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-number">02 / CASE STUDIES</span>
+          <h2>Creative work backed by measurable results.</h2>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-card">
+            <p class="case-kicker">Acasta Europe · Integrated Event Marketing</p>
+            <h3>BIBA exhibition campaign</h3>
+            <p>End-to-end planning and delivery of Acasta Europe's BIBA presence, combining event strategy, brand execution and lead generation.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><strong>£20K</strong><span>budget managed</span></div>
+              <div class="case-metric"><strong>500+</strong><span>leads generated</span></div>
+              <div class="case-metric"><strong>9,000+</strong><span>event delegates</span></div>
+            </div>
+            <a class="case-link" href="biba-case-study.html">View case study →</a>
+          </article>
+
+          <article class="case-card">
+            <p class="case-kicker">Searchlight Electric · Email & CRM</p>
+            <h3>Email campaigns & audience engagement</h3>
+            <p>Branded product-launch and customer re-engagement email activity, combining creative execution with campaign performance analysis.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><strong>9,471</strong><span>unique clickers</span></div>
+              <div class="case-metric"><strong>15,514</strong><span>total clicks</span></div>
+              <div class="case-metric"><strong>15.9%</strong><span>campaign click rate</span></div>
+            </div>
+            <a class="case-link" href="searchlight-email.html">View case study →</a>
+          </article>
+
+          <article class="case-card">
+            <p class="case-kicker">Medicus Pharmacy · Paid Social</p>
+            <h3>Paid social & lead generation</h3>
+            <p>A four-day Meta lead-generation campaign promoting the NHS repeat prescription service, focused on efficient customer acquisition.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><strong>141</strong><span>leads generated</span></div>
+              <div class="case-metric"><strong>£2.41</strong><span>cost per lead</span></div>
+              <div class="case-metric"><strong>20,432</strong><span>people reached</span></div>
+            </div>
+            <a class="case-link" href="medicus-paid-social.html">View case study →</a>
+          </article>
+
+          <article class="case-card">
+            <p class="case-kicker">Searchlight Electric · SEO</p>
+            <h3>SEO & organic search visibility</h3>
+            <p>Keyword-led website and content optimisation that improved rankings across commercially relevant Google UK search terms.</p>
+            <div class="case-metrics">
+              <div class="case-metric"><strong>48 → 13</strong><span>Wholesale Lighting</span></div>
+              <div class="case-metric"><strong>39 → 13</strong><span>Decorative Lighting</span></div>
+              <div class="case-metric"><strong>41 → 31</strong><span>Ceiling Lights</span></div>
+            </div>
+            <a class="case-link" href="searchlight-seo.html">View case study →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
     <!-- ABOUT -->
 
     <section id="about">
       <div class="container">
 
         <div class="section-heading">
-          <span class="section-number">02 / ABOUT</span>
+          <span class="section-number">03 / ABOUT</span>
           <h2>Creative thinking with commercial purpose.</h2>
         </div>
 
@@ -708,7 +901,7 @@
       <div class="container">
 
         <div class="section-heading">
-          <span class="section-number">03 / EXPERIENCE</span>
+          <span class="section-number">04 / EXPERIENCE</span>
           <h2>Career progression.</h2>
         </div>
 
@@ -720,12 +913,9 @@
         </div>
 
         <div class="role">
-          <div class="role-date">Acasta Europe</div>
+          <div class="role-date">2024 — 2026</div>
           <div class="role-title">Senior Marketing Executive</div>
-          <div class="role-company">
-            Progressed into responsibility for strategy, campaigns, events,
-            budgets, partnerships and team development.
-          </div>
+          <div class="role-company">Acasta Europe</div>
         </div>
 
         <div class="role">
@@ -772,7 +962,7 @@
       <div class="container">
 
         <div class="section-heading">
-          <span class="section-number">04 / EDUCATION</span>
+          <span class="section-number">05 / EDUCATION</span>
           <h2>Knowledge backed by experience.</h2>
         </div>
 
@@ -797,15 +987,13 @@
           <div>
 
             <div class="education-card">
-              <h3>Marketing Executive Training</h3>
-              <p>One Education · CPD Accredited · Distinction</p>
+              <h3>Management and Leadership Course Completion</h3>
+              <p>Asset Training</p>
             </div>
 
             <div class="education-card">
-              <h3>Professional Development</h3>
-              <p>
-                Leadership · LinkedIn · Adobe Photoshop
-              </p>
+              <h3>Marketing Executive Training</h3>
+              <p>One Education · CPD Accredited · Distinction</p>
             </div>
 
           </div>
@@ -833,10 +1021,10 @@
           organisations grow.
         </p>
 
-        <!-- We will add Rose's real email and LinkedIn here later -->
+        <!-- We will add Claudia's real email and LinkedIn here later -->
 
-        <a href="#" class="button button-primary">
-          Contact Rose
+        <a href="mailto:cooteclaudia@gmail.com" class="button button-primary">
+          Contact Claudia
         </a>
 
       </div>
@@ -847,7 +1035,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <span>© 2026 Rose Rose</span>
+      <span>© 2026 Claudia Coote</span>
       <span>Marketing Manager · Portfolio</span>
     </div>
   </footer>
