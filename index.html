@@ -327,35 +327,35 @@
     }
 
     /* Lock the Paid Social and SEO cards to matching content rows */
-    .case-card:nth-child(3),
-    .case-card:nth-child(4) {
+    .case-card:nth-child(2),
+    .case-card:nth-child(3) {
       display: grid;
       grid-template-rows: 22px 72px 88px 260px 112px auto;
       align-content: start;
     }
 
+    .case-card:nth-child(2) .case-kicker,
     .case-card:nth-child(3) .case-kicker,
-    .case-card:nth-child(4) .case-kicker,
+    .case-card:nth-child(2) h3,
     .case-card:nth-child(3) h3,
-    .case-card:nth-child(4) h3,
+    .case-card:nth-child(2) > p:not(.case-kicker),
     .case-card:nth-child(3) > p:not(.case-kicker),
-    .case-card:nth-child(4) > p:not(.case-kicker),
+    .case-card:nth-child(2) .case-image,
     .case-card:nth-child(3) .case-image,
-    .case-card:nth-child(4) .case-image,
-    .case-card:nth-child(3) .case-metrics,
-    .case-card:nth-child(4) .case-metrics {
+    .case-card:nth-child(2) .case-metrics,
+    .case-card:nth-child(3) .case-metrics {
       margin-top: 0;
       margin-bottom: 0;
     }
 
-    .case-card:nth-child(3) .case-image,
-    .case-card:nth-child(4) .case-image {
+    .case-card:nth-child(2) .case-image,
+    .case-card:nth-child(3) .case-image {
       height: 260px;
       align-self: start;
     }
 
-    .case-card:nth-child(3) .case-metrics,
-    .case-card:nth-child(4) .case-metrics {
+    .case-card:nth-child(2) .case-metrics,
+    .case-card:nth-child(3) .case-metrics {
       align-self: start;
       padding-top: 22px;
     }
@@ -878,6 +878,32 @@
           </article>
 
           <article class="case-card">
+            <p class="case-kicker">Medicus Pharmacy · Paid Social</p>
+            <h3>Paid Social & Lead Generation</h3>
+            <p>Working with the limited paid-media budget of a small independent pharmacy, I created and managed a four-day Meta lead-generation campaign for its free prescription delivery service, from audience targeting, copy and creative through to instant lead capture and qualification calls. This formed part of wider marketing activity during which total prescription items dispensed increased by more than 1,000, supporting business growth through increased dispensing activity.</p>
+            <img class="case-image" src="images/medicus-paid-social-results.png" alt="Medicus Pharmacy Meta lead generation campaign results">
+            <div class="case-metrics">
+              <div class="case-metric"><strong>141</strong><span>leads generated</span></div>
+              <div class="case-metric"><strong>£2.41</strong><span>cost per lead</span></div>
+              <div class="case-metric"><strong>20,432</strong><span>people reached</span></div>
+            </div>
+            <a class="case-link" href="medicus-paid-social.html">View case study →</a>
+          </article>
+
+          <article class="case-card">
+            <p class="case-kicker">Searchlight Electric · SEO</p>
+            <h3>SEO & Organic Search Visibility</h3>
+            <p>SEO recommendations, content writing and blogging alongside in-house implementation, including metadata, internal linking, technical updates and image optimisation. Ranking gains shown were achieved over a 3-month period.</p>
+            <img class="case-image" src="images/searchlight-seo-results.jpg" alt="Searchlight Electric SEO keyword ranking results">
+            <div class="case-metrics">
+              <div class="case-metric"><strong>48 → 13</strong><span>Wholesale Lighting · 3 months</span></div>
+              <div class="case-metric"><strong>39 → 13</strong><span>Decorative Lighting · 3 months</span></div>
+              <div class="case-metric"><strong>41 → 31</strong><span>Ceiling Lights · 3 months</span></div>
+            </div>
+            <a class="case-link" href="searchlight-seo.html">View case study →</a>
+          </article>
+
+          <article class="case-card">
             <p class="case-kicker">Searchlight Electric · Email & CRM</p>
             <h3>Email Campaigns</h3>
             <p>Mailchimp campaigns built and written in-house for UK, international and selected luxury-brand customers, spanning launches, offers and customer communications.</p>
@@ -892,32 +918,6 @@
               <div class="case-metric"><strong>2,119</strong><span>total clicks</span></div>
             </div>
             <a class="case-link" href="searchlight-email.html">View case study →</a>
-          </article>
-
-          <article class="case-card">
-            <p class="case-kicker">Medicus Pharmacy · Paid Social</p>
-            <h3>Paid Social & Lead Generation</h3>
-            <p>A four-day Meta lead-generation campaign for free prescription delivery, owned from audience targeting and creative through to instant lead capture and qualification calls.</p>
-            <img class="case-image" src="images/medicus-paid-social-results.png" alt="Medicus Pharmacy Meta lead generation campaign results">
-            <div class="case-metrics">
-              <div class="case-metric"><strong>141</strong><span>leads generated</span></div>
-              <div class="case-metric"><strong>£2.41</strong><span>cost per lead</span></div>
-              <div class="case-metric"><strong>20,432</strong><span>people reached</span></div>
-            </div>
-            <a class="case-link" href="medicus-paid-social.html">View case study →</a>
-          </article>
-
-          <article class="case-card">
-            <p class="case-kicker">Searchlight Electric · SEO</p>
-            <h3>SEO & Organic Search Visibility</h3>
-            <p>In-house implementation of SEO agency recommendations, including website copy, metadata, internal linking, technical updates, image optimisation and content.</p>
-            <img class="case-image" src="images/searchlight-seo-results.jpg" alt="Searchlight Electric SEO keyword ranking results">
-            <div class="case-metrics">
-              <div class="case-metric"><strong>48 → 13</strong><span>Wholesale Lighting</span></div>
-              <div class="case-metric"><strong>39 → 13</strong><span>Decorative Lighting</span></div>
-              <div class="case-metric"><strong>41 → 31</strong><span>Ceiling Lights</span></div>
-            </div>
-            <a class="case-link" href="searchlight-seo.html">View case study →</a>
           </article>
         </div>
       </div>
