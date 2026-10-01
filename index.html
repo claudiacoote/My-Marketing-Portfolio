@@ -405,10 +405,38 @@
       background: var(--cream);
     }
 
+    .roomset-gallery {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .roomset-slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+    }
+
+    .roomset-slide.is-active { opacity: 1; }
+
+    .roomset-caption {
+      margin-top: 16px;
+      color: var(--muted);
+    }
+
     .graphics-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 24px;
+      margin-top: 42px;
     }
 
     .graphic-card {
@@ -417,14 +445,6 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       overflow: hidden;
-    }
-
-    .graphic-card-featured {
-      grid-column: 1 / -1;
-    }
-
-    .graphic-card-featured img {
-      aspect-ratio: 2 / 1;
     }
 
     .graphic-card img {
@@ -442,20 +462,11 @@
       padding: 20px;
     }
 
-    .graphic-card figcaption strong {
-      color: var(--navy);
-      font-size: 1.05rem;
-    }
+    .graphic-card figcaption strong { color: var(--navy); font-size: 1.05rem; }
+    .graphic-card figcaption span { color: var(--muted); }
 
-    .graphic-card figcaption span,
-    .graphics-note {
-      color: var(--muted);
-    }
-
-    .graphics-note {
-      max-width: 760px;
-      margin-top: 24px;
-      font-size: .95rem;
+    @media (prefers-reduced-motion: reduce) {
+      .roomset-slide { transition: none; }
     }
 
     /* ABOUT */
@@ -961,58 +972,34 @@
           <h2>Creative assets designed for digital campaigns and trade partners.</h2>
         </div>
 
+        <div class="roomset-gallery" aria-label="Searchlight Electric roomset gallery">
+          <img class="roomset-slide is-active" src="images/Black roomset.jpg" alt="Searchlight lighting roomset in a contemporary living space">
+          <img class="roomset-slide" src="images/Wagon Wheel Roomset.jpg" alt="Searchlight decorative lighting roomset with mustard wall">
+          <img class="roomset-slide" src="images/1229-9CC roomset.jpg" alt="Searchlight chandelier displayed in a dining room roomset">
+          <img class="roomset-slide" src="images/iStock-1431310512 copy.jpg" alt="Dark interior roomset featuring Searchlight table lighting">
+          <img class="roomset-slide" src="images/iStock-1404048111-Recovered.jpg" alt="Bright living room roomset featuring Searchlight table lighting">
+          <img class="roomset-slide" src="images/iStock-1402804564 copy.jpg" alt="Modern open-plan roomset featuring Searchlight lighting">
+        </div>
+        <p class="roomset-caption"><strong>Searchlight Roomsets</strong> · Product-led lifestyle artwork created to showcase lighting in aspirational interiors.</p>
+
         <div class="graphics-grid">
-          <figure class="graphic-card graphic-card-featured">
-            <img src="images/Black roomset.jpg" alt="Searchlight lighting roomset in a contemporary living space">
-            <figcaption><strong>Roomset Creative</strong><span>Product-led lifestyle artwork created for Searchlight Electric.</span></figcaption>
-          </figure>
-
           <figure class="graphic-card">
-            <img src="images/Wagon Wheel Roomset.jpg" alt="Searchlight decorative lighting roomset with mustard wall">
-            <figcaption><strong>Decorative Lighting Roomset</strong><span>Lifestyle creative showcasing a coordinated lighting collection.</span></figcaption>
-          </figure>
-
-          <figure class="graphic-card">
-            <img src="images/1229-9CC roomset.jpg" alt="Searchlight chandelier displayed in a dining room roomset">
-            <figcaption><strong>Dining Roomset</strong><span>Interior creative placing the product within an aspirational setting.</span></figcaption>
-          </figure>
-
-          <figure class="graphic-card">
-            <img src="images/iStock-1431310512 copy.jpg" alt="Dark interior roomset featuring Searchlight table lighting">
-            <figcaption><strong>Interior Product Visual</strong><span>Roomset artwork developed to present lighting in context.</span></figcaption>
-          </figure>
-
-          <figure class="graphic-card">
-            <img src="images/iStock-1404048111-Recovered.jpg" alt="Bright living room roomset featuring Searchlight table lighting">
-            <figcaption><strong>Lifestyle Roomset</strong><span>Clean lifestyle creative for digital product marketing.</span></figcaption>
-          </figure>
-
-          <figure class="graphic-card">
-            <img src="images/iStock-1402804564 copy.jpg" alt="Modern open-plan roomset featuring Searchlight lighting">
-            <figcaption><strong>Modern Interior Roomset</strong><span>Product placement within a contemporary interior environment.</span></figcaption>
-          </figure>
-
-          <figure class="graphic-card graphic-card-wide">
             <img src="images/G&R Spring Banner.jpg" alt="Searchlight outdoor lighting website banner">
             <figcaption><strong>Client Website Banner</strong><span>Trade-facing digital banner creative for a client's website.</span></figcaption>
           </figure>
-
           <figure class="graphic-card">
             <img src="images/St. Patrick's Day(1).jpg" alt="Searchlight St Patrick's Day campaign graphic">
             <figcaption><strong>Seasonal Campaign Creative</strong><span>St Patrick's Day social and digital campaign artwork.</span></figcaption>
           </figure>
-
           <figure class="graphic-card">
             <img src="images/Outdoor.jpg" alt="Outdoor lighting visual in a landscaped garden">
             <figcaption><strong>Outdoor Lighting Creative</strong><span>Product-focused visual for Searchlight's outdoor lighting range.</span></figcaption>
           </figure>
-
-          <figure class="graphic-card graphic-card-wide">
+          <figure class="graphic-card">
             <img src="images/searchlight-web-banner.PNG" alt="Searchlight Electric website banner design">
             <figcaption><strong>Searchlight Web Banner</strong><span>Digital artwork created to support Searchlight's online marketing activity.</span></figcaption>
           </figure>
-
-          <figure class="graphic-card graphic-card-wide">
+          <figure class="graphic-card">
             <img src="images/sel-banner client.PNG" alt="Searchlight Electric banner artwork displayed on a client website">
             <figcaption><strong>Client Website Banner</strong><span>Trade marketing artwork supplied for use across a client's website.</span></figcaption>
           </figure>
@@ -1242,6 +1229,17 @@
     backToTop.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    const roomsetSlides = document.querySelectorAll('.roomset-slide');
+    let roomsetIndex = 0;
+
+    if (roomsetSlides.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setInterval(() => {
+        roomsetSlides[roomsetIndex].classList.remove('is-active');
+        roomsetIndex = (roomsetIndex + 1) % roomsetSlides.length;
+        roomsetSlides[roomsetIndex].classList.add('is-active');
+      }, 6000);
+    }
   </script>
 
 </body>
