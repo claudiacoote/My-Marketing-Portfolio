@@ -1,0 +1,18 @@
+{
+  "name": "my-marketing-portfolio",
+  "version": "1.0.0",
+  "description": "Marketing Portfolio of Claudia Coote",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build step required'"
+  },
+  "keywords": [
+    "portfolio",
+    "marketing"
+  ],
+  "author": "Claudia Coote",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
