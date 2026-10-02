@@ -567,6 +567,15 @@
       font-weight: 700;
       cursor: pointer;
       transition: background .2s ease, color .2s ease, border-color .2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .quality-icon {
+      font-size: 1.05rem;
+      line-height: 1;
+      font-weight: 700;
     }
 
     .quality-tab:hover,
@@ -1091,11 +1100,11 @@
         </div>
 
         <div class="quality-tabs" role="tablist" aria-label="Marketing qualities">
-          <button class="quality-tab" type="button" role="tab" aria-selected="false" data-quality="b2b">B2B + B2C</button>
-          <button class="quality-tab" type="button" role="tab" aria-selected="false" data-quality="strategic">Strategic + Hands-on</button>
-          <button class="quality-tab" type="button" role="tab" aria-selected="false" data-quality="commercial">Commercially Focused</button>
-          <button class="quality-tab" type="button" role="tab" aria-selected="false" data-quality="ownership">Ownership + Initiative</button>
-          <button class="quality-tab" type="button" role="tab" aria-selected="false" data-quality="industry">Cross-industry Experience</button>
+          <button class="quality-tab" type="button" role="tab" aria-selected="false" data-quality="b2b"><span class="quality-label">B2B + B2C</span><span class="quality-icon" aria-hidden="true">+</span></button>
+          <button class="quality-tab" type="button" role="tab" aria-selected="false" data-quality="strategic"><span class="quality-label">Strategic + Hands-on</span><span class="quality-icon" aria-hidden="true">+</span></button>
+          <button class="quality-tab" type="button" role="tab" aria-selected="false" data-quality="commercial"><span class="quality-label">Commercially Focused</span><span class="quality-icon" aria-hidden="true">+</span></button>
+          <button class="quality-tab" type="button" role="tab" aria-selected="false" data-quality="ownership"><span class="quality-label">Ownership + Initiative</span><span class="quality-icon" aria-hidden="true">+</span></button>
+          <button class="quality-tab" type="button" role="tab" aria-selected="false" data-quality="industry"><span class="quality-label">Cross-industry Experience</span><span class="quality-icon" aria-hidden="true">+</span></button>
         </div>
 
         <div class="quality-panel" aria-live="polite"></div>
@@ -1279,12 +1288,25 @@
 
     qualityTabs.forEach((tab) => {
       tab.addEventListener('click', () => {
+        const wasActive = tab.classList.contains('is-active');
+
         qualityTabs.forEach((item) => {
           item.classList.remove('is-active');
           item.setAttribute('aria-selected', 'false');
+          const icon = item.querySelector('.quality-icon');
+          if (icon) icon.textContent = '+';
         });
+
+        if (wasActive) {
+          qualityPanel.innerHTML = '';
+          qualityPanel.style.display = 'none';
+          return;
+        }
+
         tab.classList.add('is-active');
         tab.setAttribute('aria-selected', 'true');
+        const activeIcon = tab.querySelector('.quality-icon');
+        if (activeIcon) activeIcon.textContent = '−';
         const [title, copy] = qualityContent[tab.dataset.quality];
         qualityPanel.innerHTML = `<h3>${title}</h3><p>${copy}</p>`;
         qualityPanel.style.display = 'block';
