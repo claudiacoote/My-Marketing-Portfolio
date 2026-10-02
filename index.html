@@ -536,6 +536,66 @@
       font-weight: 600;
     }
 
+
+    /* WHAT I BRING */
+
+    .qualities {
+      background: var(--cream);
+      padding: 4px 0 60px;
+      margin-top: -72px;
+    }
+
+    .qualities .section-heading {
+      margin-bottom: 32px;
+    }
+
+    .quality-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .quality-tab {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--navy);
+      border-radius: 999px;
+      padding: 11px 17px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s ease, color .2s ease, border-color .2s ease;
+    }
+
+    .quality-tab:hover,
+    .quality-tab.is-active {
+      background: var(--navy);
+      color: white;
+      border-color: var(--navy);
+    }
+
+    .quality-panel {
+      display: none;
+      max-width: 820px;
+      min-height: 92px;
+      padding: 26px 28px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .quality-panel h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .quality-panel p {
+      color: var(--muted);
+      margin: 0;
+    }
+
     /* EXPERIENCE */
 
     .experience {
@@ -1021,6 +1081,28 @@
     </section>
 
 
+    <!-- WHAT I BRING -->
+
+    <section class="qualities" id="qualities">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-number">WHAT I BRING</span>
+          <h2></h2>
+        </div>
+
+        <div class="quality-tabs" role="tablist" aria-label="Marketing qualities">
+          <button class="quality-tab" type="button" role="tab" aria-selected="false" data-quality="b2b">B2B + B2C</button>
+          <button class="quality-tab" type="button" role="tab" aria-selected="false" data-quality="strategic">Strategic + Hands-on</button>
+          <button class="quality-tab" type="button" role="tab" aria-selected="false" data-quality="commercial">Commercially Focused</button>
+          <button class="quality-tab" type="button" role="tab" aria-selected="false" data-quality="ownership">Ownership + Initiative</button>
+          <button class="quality-tab" type="button" role="tab" aria-selected="false" data-quality="industry">Cross-industry Experience</button>
+        </div>
+
+        <div class="quality-panel" aria-live="polite"></div>
+      </div>
+    </section>
+
+
     <!-- EXPERIENCE -->
 
     <section class="experience" id="experience">
@@ -1181,6 +1263,32 @@
 
     backToTop.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+
+    const qualityContent = {
+      b2b: ['B2B + B2C', 'I have experience marketing to both business and consumer audiences, adapting messaging and activity for different customer journeys.'],
+      strategic: ['Strategic + Hands-on', 'I am able to develop the approach and then personally deliver the work across multiple marketing channels.'],
+      commercial: ['Commercially Focused', 'I connect marketing activity to meaningful outcomes including leads, qualified opportunities, engagement, visibility and business growth.'],
+      ownership: ['Ownership + Initiative', 'I take responsibility from idea through to delivery, identifying opportunities and making recommendations rather than waiting for a brief.'],
+      industry: ['Cross-industry Experience', 'I have experience spanning insurance, lighting, pharmacy, legal and digital environments, and I am able to understand new products, markets and audiences quickly.']
+    };
+
+    const qualityTabs = document.querySelectorAll('.quality-tab');
+    const qualityPanel = document.querySelector('.quality-panel');
+
+    qualityTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        qualityTabs.forEach((item) => {
+          item.classList.remove('is-active');
+          item.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('is-active');
+        tab.setAttribute('aria-selected', 'true');
+        const [title, copy] = qualityContent[tab.dataset.quality];
+        qualityPanel.innerHTML = `<h3>${title}</h3><p>${copy}</p>`;
+        qualityPanel.style.display = 'block';
+      });
     });
 
     const roomsetSlides = document.querySelectorAll('.roomset-slide');
