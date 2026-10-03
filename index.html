@@ -700,6 +700,34 @@
 
     @media (max-width: 800px) {
 
+      /* Let the Paid Social card flow naturally on mobile.
+         Desktop uses fixed grid rows to align it with SEO. */
+      .case-card:nth-child(2) {
+        display: block;
+      }
+
+      .case-card:nth-child(2) h3 {
+        margin-bottom: 12px;
+      }
+
+      .case-card:nth-child(2) > p:not(.case-kicker) {
+        margin-bottom: 22px;
+      }
+
+      .case-card:nth-child(2) .case-image {
+        height: auto;
+        margin-top: 8px;
+      }
+
+      .case-card:nth-child(2) .case-metrics {
+        margin: 22px 0;
+        padding-top: 0;
+      }
+
+      .case-card:nth-child(2) .case-link {
+        margin-top: 18px;
+      }
+
       .case-card:nth-child(3),
       .case-card:nth-child(4) {
         display: block;
