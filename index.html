@@ -800,6 +800,11 @@
         height: auto;
       }
 
+      /* Keep the Email Campaigns card compact on mobile: show one example only */
+      .case-card:nth-child(4) .creative-grid img:not(:first-child) {
+        display: none;
+      }
+
       .footer-inner {
         flex-direction: column;
         gap: 8px;
