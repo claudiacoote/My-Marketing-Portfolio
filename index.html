@@ -925,7 +925,21 @@
       .management-tab { padding: 10px 12px; font-size: .78rem; }
     }
 
-  </style>
+  
+    .management-tabs .management-tab{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .management-tabs .accordion-sign{
+      font-size:1.25rem;
+      line-height:1;
+      font-weight:500;
+      flex:0 0 auto;
+    }
+
+</style>
 </head>
 
 <body>
@@ -1103,14 +1117,14 @@
         </div>
 
         <div class="quality-tabs management-tabs" role="tablist" aria-label="Management and leadership experience">
-          <button class="quality-tab management-tab is-active" type="button" data-management="people" aria-selected="true">People</button>
-          <button class="quality-tab management-tab" type="button" data-management="budgets" aria-selected="false">Budgets</button>
-          <button class="quality-tab management-tab" type="button" data-management="stakeholders" aria-selected="false">Stakeholders</button>
-          <button class="quality-tab management-tab" type="button" data-management="delivery" aria-selected="false">Delivery</button>
+          <button class="quality-tab management-tab is-active" type="button" data-management="people" aria-selected="true"><span class="tab-label">Line Management</span><span class="accordion-sign" aria-hidden="true">+</span></button>
+          <button class="quality-tab management-tab" type="button" data-management="budgets" aria-selected="false"><span class="tab-label">Budgets</span><span class="accordion-sign" aria-hidden="true">+</span></button>
+          <button class="quality-tab management-tab" type="button" data-management="stakeholders" aria-selected="false"><span class="tab-label">Stakeholders</span><span class="accordion-sign" aria-hidden="true">+</span></button>
+          <button class="quality-tab management-tab" type="button" data-management="delivery" aria-selected="false"><span class="tab-label">Delivery</span><span class="accordion-sign" aria-hidden="true">+</span></button>
         </div>
         <div class="quality-panel management-panel" aria-live="polite">
-          <h3>People</h3>
-          <p>Managed and mentored a Marketing Executive through regular 1-to-1s, development support and KPI monitoring, with progress reviewed by the Head of Marketing and Operations.</p>
+          <h3>Line Management</h3>
+          <p>Managed and developed a Marketing Executive, setting and monitoring KPIs across campaign delivery, content, communications and website management, using Monday.com to track workloads, priorities and progress. Regular 1-2-1s, coaching and progressive delegation kept KPIs consistently on track while building greater autonomy, confidence and ownership, preparing them to take on increased responsibility within the business.</p>
         </div>
       </div>
     </section>
@@ -1414,7 +1428,7 @@
 
 
     const managementContent = {
-      people: ['People', 'Managed and mentored a Marketing Executive through regular 1-to-1s, development support and KPI monitoring, with progress reviewed by the Head of Marketing and Operations.'],
+      people: ['Line Management', 'Managed and developed a Marketing Executive, setting and monitoring KPIs across campaign delivery, content, communications and website management, using Monday.com to track workloads, priorities and progress. Regular 1-2-1s, coaching and progressive delegation kept KPIs consistently on track while building greater autonomy, confidence and ownership, preparing them to take on increased responsibility within the business.'],
       budgets: ['Budgets', 'Managed marketing and campaign spend, including end-to-end ownership of a £20K exhibition budget covering stand delivery, suppliers, venue requirements, merchandise and associated costs.'],
       stakeholders: ['Stakeholders', 'Worked with directors, Sales and cross-functional teams alongside external agencies, partners and suppliers, translating business objectives into coordinated marketing activity.'],
       delivery: ['Delivery', 'Led integrated activity from planning, research and recommendations through to hands-on execution, performance monitoring and follow-up across digital, events, content and brand.']
@@ -1423,16 +1437,36 @@
     const managementTabs = document.querySelectorAll('.management-tab');
     const managementPanel = document.querySelector('.management-panel');
 
+    const setManagementSigns = () => {
+      managementTabs.forEach((item) => {
+        const sign = item.querySelector('.accordion-sign');
+        if (sign) sign.textContent = item.classList.contains('is-active') && managementPanel.style.display !== 'none' ? '−' : '+';
+      });
+    };
+
+    setManagementSigns();
+
     managementTabs.forEach((tab) => {
       tab.addEventListener('click', () => {
+        const wasOpen = tab.classList.contains('is-active') && managementPanel.style.display !== 'none';
+
         managementTabs.forEach((item) => {
           item.classList.remove('is-active');
           item.setAttribute('aria-selected', 'false');
         });
+
+        if (wasOpen) {
+          managementPanel.style.display = 'none';
+          setManagementSigns();
+          return;
+        }
+
         tab.classList.add('is-active');
         tab.setAttribute('aria-selected', 'true');
         const [title, copy] = managementContent[tab.dataset.management];
         managementPanel.innerHTML = `<h3>${title}</h3><p>${copy}</p>`;
+        managementPanel.style.display = 'block';
+        setManagementSigns();
       });
     });
 
