@@ -937,6 +937,63 @@
       .catalogue-card { grid-template-columns:1fr; }
     }
 </style>
+
+<style>
+/* Creative page layout fixes */
+.creative-page-hero {
+  padding: 84px 0 64px;
+}
+.creative-page-hero .section-number {
+  display: block;
+  margin-bottom: 18px;
+}
+.creative-page-hero h1 {
+  max-width: 920px;
+  margin: 0 0 22px;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+.creative-page-hero p {
+  max-width: 760px;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.site-header .nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.site-header nav a {
+  margin: 0;
+}
+@media (max-width: 760px) {
+  .creative-page-hero {
+    padding: 58px 0 46px;
+  }
+  .creative-page-hero h1 {
+    font-size: clamp(2.35rem, 12vw, 3.6rem);
+    line-height: 1;
+  }
+  .site-header .nav-wrap {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .site-header nav {
+    gap: 12px 18px;
+  }
+}
+</style>
+
 </head>
 <body>
   <header class="site-header">
