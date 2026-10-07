@@ -1,0 +1,1029 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Creative &amp; Content | Claudia Coote</title>
+  <meta name="description" content="Selected creative and content work by Marketing Manager Claudia Coote, including roomsets, B2B banners, copywriting and proofreading.">
+  <script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap');
+    :root {
+      --navy: #12263A;
+      --navy-light: #36566F;
+      --cream: #F8F7F4;
+      --white: #FFFFFF;
+      --text: #171717;
+      --muted: #667085;
+      --border: #E4E4E0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: 0 auto;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 247, 244, 0.95);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--navy);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      font-size: 0.92rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--navy-light);
+    }
+
+    .nav-button {
+      padding: 10px 18px;
+      background: var(--navy);
+      color: white !important;
+      border-radius: 9px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--navy-light);
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-family: 'Manrope', 'Inter', Arial, sans-serif;
+      color: var(--navy);
+      font-size: clamp(3.6rem, 9vw, 8rem);
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+      max-width: 900px;
+    }
+
+    .hero-title {
+      margin-top: 28px;
+      font-size: clamp(1.35rem, 2.5vw, 2rem);
+      font-weight: 500;
+    }
+
+    .hero-description {
+      margin-top: 20px;
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 15px;
+      margin-top: 38px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 23px;
+      border: 1px solid var(--navy);
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--navy);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: var(--navy-light);
+    }
+
+    .button-secondary {
+      color: var(--navy);
+    }
+
+    .button-secondary:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    /* STATS */
+
+    .stats {
+      background: var(--navy);
+      color: white;
+      padding: 50px 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stat {
+      padding: 15px 30px;
+      border-right: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .stat:first-child {
+      padding-left: 0;
+    }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .stat-label {
+      color: rgba(255,255,255,0.72);
+      font-size: 0.9rem;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 50px;
+      margin-bottom: 60px;
+    }
+
+    .section-number {
+      color: var(--navy-light);
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-family: 'Manrope', 'Inter', Arial, sans-serif;
+      color: var(--navy);
+      font-size: clamp(2.2rem, 5vw, 4.3rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    /* WORK */
+
+    .work {
+      background: white;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 0.8fr 2fr 1fr;
+      gap: 40px;
+      padding: 45px 0;
+      border-top: 1px solid var(--border);
+      transition: 0.2s ease;
+    }
+
+    .project:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project:hover {
+      padding-left: 12px;
+    }
+
+    .project-number {
+      color: var(--navy-light);
+      font-weight: 700;
+    }
+
+    .project h3 {
+      font-family: 'Manrope', 'Inter', Arial, sans-serif;
+      color: var(--navy);
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      color: var(--muted);
+      max-width: 600px;
+    }
+
+    .project-tags {
+      font-size: 0.85rem;
+      color: var(--navy-light);
+      line-height: 1.8;
+    }
+
+    .result {
+      display: inline-block;
+      margin-top: 16px;
+      font-weight: 700;
+      color: var(--navy) !important;
+    }
+
+    /* CASE STUDIES */
+
+    .case-studies {
+      background: var(--cream);
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .case-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 34px;
+      overflow: hidden;
+    }
+
+    .case-kicker {
+      color: var(--navy-light);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .case-card h3 {
+      color: var(--navy);
+      font-size: 1.65rem;
+      margin-bottom: 12px;
+    }
+
+    .case-card > p {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    /* Lock the Paid Social and SEO cards to matching content rows */
+    .case-card:nth-child(2),
+    .case-card:nth-child(3) {
+      display: grid;
+      grid-template-rows: 22px 72px 88px 260px 112px auto;
+      align-content: start;
+    }
+
+    .case-card:nth-child(2) .case-kicker,
+    .case-card:nth-child(3) .case-kicker,
+    .case-card:nth-child(2) h3,
+    .case-card:nth-child(3) h3,
+    .case-card:nth-child(2) > p:not(.case-kicker),
+    .case-card:nth-child(3) > p:not(.case-kicker),
+    .case-card:nth-child(2) .case-image,
+    .case-card:nth-child(3) .case-image,
+    .case-card:nth-child(2) .case-metrics,
+    .case-card:nth-child(3) .case-metrics {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .case-card:nth-child(2) .case-image,
+    .case-card:nth-child(3) .case-image {
+      height: 260px;
+      align-self: start;
+    }
+
+    .case-card:nth-child(2) .case-metrics,
+    .case-card:nth-child(3) .case-metrics {
+      align-self: start;
+      padding-top: 22px;
+    }
+
+    .case-card:nth-child(3) .case-link,
+    .case-card:nth-child(4) .case-link {
+      align-self: start;
+      justify-self: start;
+      margin-top: 18px;
+    }
+
+    .case-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 22px 0;
+    }
+
+    .case-metric {
+      border-top: 2px solid var(--navy);
+      padding-top: 12px;
+    }
+
+    .case-metric strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+
+    .case-metric span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .case-image {
+      width: 100%;
+      border-radius: 11px;
+      height: 260px;
+      object-fit: cover;
+      object-position: top;
+      border: 1px solid var(--border);
+      margin-top: 8px;
+    }
+
+    .creative-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .creative-grid img {
+      width: 100%;
+      border-radius: 11px;
+      height: 220px;
+      object-fit: cover;
+      object-position: top;
+      border: 1px solid var(--border);
+    }
+
+    .case-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .case-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--navy);
+      font-weight: 700;
+      border-bottom: 1px solid var(--navy);
+      padding-bottom: 2px;
+    }
+
+    .case-link:hover {
+      color: var(--navy-light);
+      border-color: var(--navy-light);
+    }
+
+
+    /* GRAPHICS & CREATIVE */
+
+    .graphics {
+      background: var(--cream);
+    }
+
+    .roomset-gallery {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .roomset-slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+    }
+
+    .roomset-slide.is-active { opacity: 1; }
+
+    .roomset-caption {
+      margin-top: 16px;
+      color: var(--muted);
+    }
+
+    .graphics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 42px;
+    }
+
+    .graphic-card {
+      margin: 0;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .graphic-card img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: white;
+    }
+
+    .graphic-card figcaption {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 20px;
+    }
+
+    .graphic-card figcaption strong { color: var(--navy); font-size: 1.05rem; }
+    .graphic-card figcaption span { color: var(--muted); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .roomset-slide { transition: none; }
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin-bottom: 20px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .skill {
+      border-bottom: 1px solid var(--border);
+      padding: 13px 0;
+      font-weight: 600;
+    }
+
+
+    /* WHAT I BRING */
+
+    .qualities {
+      background: var(--cream);
+      padding: 4px 0 60px;
+      margin-top: -72px;
+    }
+
+    .qualities .section-heading {
+      margin-bottom: 32px;
+    }
+
+    .quality-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .quality-tab {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--navy);
+      border-radius: 999px;
+      padding: 11px 17px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s ease, color .2s ease, border-color .2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .quality-icon {
+      font-size: 1.05rem;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .quality-tab:hover,
+    .quality-tab.is-active {
+      background: var(--navy);
+      color: white;
+      border-color: var(--navy);
+    }
+
+    .quality-panel {
+      display: none;
+      max-width: 820px;
+      min-height: 92px;
+      padding: 26px 28px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .quality-panel h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .quality-panel p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* EXPERIENCE */
+
+    .experience {
+      background: var(--navy);
+      color: white;
+    }
+
+    .experience h2 {
+      font-family: 'Manrope', 'Inter', Arial, sans-serif;
+      color: white;
+    }
+
+    .experience .section-number {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .role {
+      display: grid;
+      grid-template-columns: 0.7fr 1fr 1.5fr;
+      gap: 30px;
+      padding: 28px 0;
+      border-top: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .role-date {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .role-title {
+      font-weight: 700;
+    }
+
+    .role-company {
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* EDUCATION */
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 80px;
+    }
+
+    .education-card {
+      padding: 35px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .education-card h3 {
+      color: var(--navy);
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .education-card p {
+      color: var(--muted);
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-family: 'Manrope', 'Inter', Arial, sans-serif;
+      max-width: 850px;
+      margin: 0 auto 25px;
+    }
+
+    .contact p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto 35px;
+    }
+
+    footer {
+      background: white;
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      /* Let the Paid Social card flow naturally on mobile.
+         Desktop uses fixed grid rows to align it with SEO. */
+      .case-card:nth-child(2) {
+        display: block;
+      }
+
+      .case-card:nth-child(2) h3 {
+        margin-bottom: 12px;
+      }
+
+      .case-card:nth-child(2) > p:not(.case-kicker) {
+        margin-bottom: 22px;
+      }
+
+      .case-card:nth-child(2) .case-image {
+        height: auto;
+        margin-top: 8px;
+      }
+
+      .case-card:nth-child(2) .case-metrics {
+        margin: 22px 0;
+        padding-top: 0;
+      }
+
+      .case-card:nth-child(2) .case-link {
+        margin-top: 18px;
+      }
+
+      .case-card:nth-child(3),
+      .case-card:nth-child(4) {
+        display: block;
+      }
+
+      .case-card:nth-child(3) h3,
+      .case-card:nth-child(4) h3 {
+        margin-bottom: 12px;
+      }
+
+      .case-card:nth-child(3) > p:not(.case-kicker),
+      .case-card:nth-child(4) > p:not(.case-kicker) {
+        margin-bottom: 22px;
+      }
+
+      .case-card:nth-child(3) .case-image,
+      .case-card:nth-child(4) .case-image {
+        margin-top: 8px;
+      }
+
+      .case-card:nth-child(3) .case-metrics,
+      .case-card:nth-child(4) .case-metrics {
+        margin: 22px 0;
+        padding-top: 0;
+      }
+
+      .nav-links a:not(.nav-button) {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 100px 0;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat {
+        border-right: none;
+        padding: 20px 0;
+      }
+
+      .section-heading,
+      .about-grid,
+      .education-grid,
+      .case-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .project {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .role {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .skills,
+      .case-metrics,
+      .creative-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .creative-grid img {
+        height: auto;
+      }
+
+      /* Keep the Email Campaigns card compact on mobile: show one example only */
+      .case-card:nth-child(4) .creative-grid img:not(:first-child) {
+        display: none;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+      .management { padding: 58px 0; }
+      .management-panel { min-height: 0; }
+    }
+
+/* BACK TO TOP */
+    .back-to-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 46px;
+      height: 46px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--navy);
+      color: white;
+      font: inherit;
+      font-size: 1.35rem;
+      line-height: 1;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 8px 24px rgba(18, 38, 58, 0.18);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+      z-index: 200;
+    }
+
+    .back-to-top.is-visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-2px);
+    }
+
+    .back-to-top:focus-visible {
+      outline: 3px solid rgba(54, 86, 111, .35);
+      outline-offset: 3px;
+    }
+
+  
+    .photo-credit {
+      margin: 10px 0 0;
+      font-size: 0.75rem;
+      color: var(--muted, #6b7280);
+      font-style: italic;
+    }
+
+
+    /* Management & Leadership tabs */
+    .management-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 28px 0 26px;
+    }
+
+    .management-tab {
+      -webkit-appearance: none;
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--navy);
+      padding: 11px 16px;
+      font: inherit;
+      font-size: .82rem;
+      font-weight: 700;
+      line-height: 1.2;
+      cursor: pointer;
+      border-radius: 12px;
+      transition: background .2s ease, color .2s ease, border-color .2s ease;
+    }
+
+    .management-tab:hover,
+    .management-tab.is-active,
+    .management-tab[aria-selected="true"] {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--white);
+    }
+
+    .management-tab:focus-visible {
+      outline: 2px solid var(--navy-light);
+      outline-offset: 3px;
+    }
+
+    .management-panel {
+      display: block;
+      max-width: 900px;
+    }
+
+    .management-panel h3 {
+      color: var(--navy);
+      font-size: 1.35rem;
+      margin: 0 0 10px;
+    }
+
+    .management-panel p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    @media (max-width: 800px) {
+      .management-tabs { gap: 8px; }
+      .management-tab { padding: 10px 12px; font-size: .78rem; }
+    }
+
+  
+    .creative-page-hero { padding: 96px 0 54px; }
+    .creative-page-hero h1 { max-width: 850px; margin-bottom: 18px; }
+    .creative-page-hero p { max-width: 760px; color: var(--muted); font-size: 1.05rem; }
+    .creative-work-section { padding: 70px 0; border-top: 1px solid var(--line); }
+    .creative-work-section h2 { margin-bottom: 12px; }
+    .creative-intro { max-width: 760px; color: var(--muted); margin-bottom: 30px; }
+    .catalogue-card { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(260px,.75fr); gap:34px; align-items:center; }
+    .catalogue-card img { width:100%; border-radius:18px; display:block; border:1px solid var(--line); }
+    .catalogue-copy h3 { margin:0 0 12px; }
+    .catalogue-copy p { color:var(--muted); }
+    .work-tags { margin-top:18px; font-size:.82rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .creative-back { margin-top:32px; }
+    @media (max-width: 760px) {
+      .creative-page-hero { padding-top:72px; }
+      .catalogue-card { grid-template-columns:1fr; }
+    }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Claudia Coote</a>
+      <nav aria-label="Creative page navigation">
+        <a href="index.html#case-studies">Case Studies</a>
+        <a href="index.html#graphics">Creative</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#contact">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="creative-page-hero">
+      <div class="container">
+        <span class="section-number">CREATIVE &amp; CAMPAIGN EXECUTION</span>
+        <h1>Hands-on creative supporting wider marketing activity.</h1>
+        <p>Alongside strategy and campaign management, I have hands-on experience producing and supporting visual assets, copy and customer-facing content across digital and print.</p>
+      </div>
+    </section>
+
+    <section class="creative-work-section">
+      <div class="container">
+        <span class="section-number">01 / ROOMSETS</span>
+        <h2>Roomset &amp; product imagery.</h2>
+        <p class="creative-intro">Searchlight Electric product roomsets used across website imagery and marketing collateral.</p>
+        <div class="roomset-gallery" aria-label="Searchlight Electric roomset slideshow">
+          <img class="roomset-slide is-active" src="images/Black roomset.jpg" alt="Searchlight lighting roomset in a contemporary living space">
+          <img class="roomset-slide" src="images/Wagon Wheel Roomset.jpg" alt="Searchlight decorative lighting roomset with mustard wall">
+          <img class="roomset-slide" src="images/1229-9CC roomset.jpg" alt="Searchlight chandelier displayed in a dining room roomset">
+          <img class="roomset-slide" src="images/iStock-1431310512 copy.jpg" alt="Dark interior roomset featuring Searchlight table lighting">
+          <img class="roomset-slide" src="images/iStock-1404048111-Recovered.jpg" alt="Bright living room roomset featuring Searchlight table lighting">
+          <img class="roomset-slide" src="images/iStock-1402804564 copy.jpg" alt="Modern open-plan roomset featuring Searchlight lighting">
+        </div>
+      </div>
+    </section>
+
+    <section class="creative-work-section">
+      <div class="container">
+        <span class="section-number">02 / BANNERS</span>
+        <h2>B2B website banners.</h2>
+        <p class="creative-intro">Customer-facing banner creative produced to promote Searchlight lighting products on B2B customer websites.</p>
+        <div class="graphics-grid">
+          <figure class="graphic-card">
+            <img src="images/searchlight-web-banner.PNG" alt="Searchlight Electric website banner design">
+            <figcaption><strong>Customer Website Banner 1</strong><span>B2B banner designed for a customer’s website to promote Searchlight lighting products.</span></figcaption>
+          </figure>
+          <figure class="graphic-card">
+            <img src="images/sel-banner client.PNG" alt="Searchlight Electric banner artwork displayed on a client website">
+            <figcaption><strong>Customer Website Banner 2</strong><span>B2B banner designed for a customer’s website to promote Searchlight lighting products.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="creative-work-section">
+      <div class="container">
+        <span class="section-number">03 / COPYWRITING &amp; CONTENT</span>
+        <h2>Lux &amp; Belle 2024–25 Catalogue.</h2>
+        <div class="catalogue-card">
+          <img src="images/lux-belle-2024-25-catalogue-cover.png" alt="Front and back cover of the Lux and Belle 2024–25 catalogue">
+          <div class="catalogue-copy">
+            <h3>Searchlight Electric · Lux &amp; Belle</h3>
+            <p>Contributed copywriting and proofreading for the Lux &amp; Belle 2024–25 catalogue, reviewing content for accuracy, consistency and errors ahead of publication.</p>
+            <p class="work-tags">Print · Copywriting · Proofreading</p>
+          </div>
+        </div>
+        <div class="creative-back">
+          <a href="index.html#graphics" class="button button-secondary">← Back to portfolio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const roomsetSlides = document.querySelectorAll('.roomset-slide');
+    let roomsetIndex = 0;
+    if (roomsetSlides.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setInterval(() => {
+        roomsetSlides[roomsetIndex].classList.remove('is-active');
+        roomsetIndex = (roomsetIndex + 1) % roomsetSlides.length;
+        roomsetSlides[roomsetIndex].classList.add('is-active');
+      }, 3500);
+    }
+  </script>
+</body>
+</html>
